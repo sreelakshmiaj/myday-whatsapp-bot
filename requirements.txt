@@ -1,0 +1,6 @@
+# Vercel Python serverless minimal dependencies
+vercel-python
+python-dotenv
+
+# Twilio is optional — only add if you're sending outbound messages
+twilio
