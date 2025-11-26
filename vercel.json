@@ -1,56 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "api/webhook.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/webhook",
-            "dest": "api/webhook.py"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "api/webhook.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/webhook.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhook",
+      "dest": "api/webhook.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "api/webhook.py"
+    }
+  ]
 }
-```
-
-4. Click **"Commit changes"** → **"Commit changes"**
-5. ✅ Third file created!
-
-#### Step 9: Create .gitignore
-
-1. Click **"Add file"** → **"Create new file"**
-2. Type filename: `.gitignore`
-3. Paste this:
-```
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-.env.local
-
-# Vercel
-.vercel
